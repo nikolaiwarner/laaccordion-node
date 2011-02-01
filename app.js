@@ -10,6 +10,13 @@ var app = module.exports = express.createServer();
 // Configuration
 
 app.configure(function(){
+  app.set('client_id', 1);
+  app.set('email', 'nickwarner+LAA@gmail.com');
+  app.set('server_url', 'http://nwarner.com/projects/laacorder/');
+  app.set('recordings_dir', '/Users/nickwarner/Music/recordings');
+
+
+
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.bodyDecoder());
@@ -31,7 +38,7 @@ app.configure('production', function(){
 app.get('/', function(req, res){
   res.render('index', {
     locals: {
-      title: 'Express'
+      title: 'Laaccordion'
     }
   });
 });
@@ -42,3 +49,4 @@ if (!module.parent) {
   app.listen(3000);
   console.log("Express server listening on port %d", app.address().port)
 }
+
