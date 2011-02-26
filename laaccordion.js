@@ -4,6 +4,7 @@ require('ext');
 function LaacordionClient() {
   var email = require('mailer');
 
+/*
   function record(){
     
     var date = parse('now');
@@ -24,8 +25,10 @@ function LaacordionClient() {
   
     return track_filename;
   }
+*/
 
 
+/*
   function send_email(subject, body){
     email.send({
       host: "localhost",              
@@ -42,8 +45,10 @@ function LaacordionClient() {
       if(err){ console.log(err); }
     });
   }
+*/
 
 
+/*
   function sync_with_server(){
     // check in with home server to get orders
     $json = file_get_contents(HOME."server~clientid=".CLIENTID."&sync=true&clienttime=".date("H:i"));
@@ -67,18 +72,21 @@ function LaacordionClient() {
   
     // Need to upload a file:
     if ($data['uploadfiles']) {
-  /*
+  
       $data['uploadfiles'].each_with_index do |file, index|
         upload_file $data['uploadfiles'][index]['filename']
       }
-  */
+  
     }
   }
+*/
   
   
+/*
   function upload_file(filename){
     var file = app.settings.recordings_dir + '/' + filename;
 //    response = `curl -F file=@".$file." -F clientid=".CLIENTID." -F upload=true  ".$url `
   }
+*/
 
 }

@@ -4,6 +4,8 @@
  */
 
 var express = require('express');
+require('LaacordionClient');
+
 
 var app = module.exports = express.createServer();
 
@@ -36,6 +38,8 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', function(req, res){
+
+  var client = LaacordionClient();
   res.render('index', {
     locals: {
       title: 'Laaccordion'
